@@ -11,9 +11,9 @@ public class titleScreen : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    public void backToMenu()
+    public void backToTutorial()
     {
-        SceneManager.LoadScene("Title Screen");
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void optionsMenu()
@@ -21,6 +21,10 @@ public class titleScreen : MonoBehaviour
         SceneManager.LoadScene("Options");
     }
 
+    public void nextTutorial()
+    {
+        SceneManager.LoadScene("Tutorial2");
+    }
     public void quitGame()
     {
         Application.Quit();

@@ -8,6 +8,7 @@ public class gameManager : MonoBehaviour
     public GameObject p2token;
     bool player1 = true;
     bool player2 = false;
+     
 
     void Update()
     {
