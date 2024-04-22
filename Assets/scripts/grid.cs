@@ -24,15 +24,20 @@ public class grid : MonoBehaviour
     //        { 
     //        GameObject grid = Instantiate(gridPiece) as GameObject;
     //            gridPiece.transform.position = new Vector3(i, y,0f);
-            
-            
-            
-            
+
+
+
+
     //        }
     //    }
 
     //}
 
-
+  
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        Debug.Log("placed");
+        coll.transform.position= transform.position;
+    }
 
 }
