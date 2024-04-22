@@ -33,6 +33,7 @@ public class grid : MonoBehaviour
 
     //}
     public tokenCounter tokenCounter;
+    public GameObject triangle;
   
     private void OnTriggerEnter2D(Collider2D coll)
     {
@@ -43,12 +44,15 @@ public class grid : MonoBehaviour
         {
             Debug.Log("p1token placed");
             tokenCounter.decreaseP1Tokens();
+            triangle.transform.Rotate(0f, 0f, -90.0f, Space.Self);
+
         }
 
         if (coll.tag == "player2token")
         {
             Debug.Log("p2token placed");
             tokenCounter.decreaseP2Tokens();
+            triangle.transform.Rotate(0f, 0f, -90.0f, Space.Self);
         }
     }
 
