@@ -32,12 +32,26 @@ public class grid : MonoBehaviour
     //    }
 
     //}
-
+    public tokenCounter tokenCounter;
   
     private void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("placed");
+       
         coll.transform.position= transform.position;
+
+        if (coll.tag == "player1token")
+        {
+            Debug.Log("p1token placed");
+            tokenCounter.decreaseP1Tokens();
+        }
+
+        if (coll.tag == "player2token")
+        {
+            Debug.Log("p2token placed");
+            tokenCounter.decreaseP2Tokens();
+        }
     }
+
+    
 
 }
