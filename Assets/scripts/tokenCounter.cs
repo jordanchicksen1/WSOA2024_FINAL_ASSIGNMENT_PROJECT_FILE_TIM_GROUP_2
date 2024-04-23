@@ -11,11 +11,12 @@ public class tokenCounter : MonoBehaviour
     public Text player1Text;
     public Text player2Text;
 
-    [ContextMenu ("decrease p1 token")]
+    [ContextMenu("decrease p1 token")]
     public void decreaseP1Tokens()
-    { 
-    player1tokens = player1tokens - 1;
-    player1Text.text = player1tokens.ToString("0");
+    {
+        player1tokens = player1tokens - 1;
+        player1Text.text = player1tokens.ToString("0");
+
         return;
     }
 
@@ -26,6 +27,20 @@ public class tokenCounter : MonoBehaviour
         player2Text.text = player2tokens.ToString("0");
         return;
     }
+
+
+    public GameObject drawScrren; 
+
+    public void Draw() 
+    {
+    drawScrren.SetActive(true);
+    }
+    
+    
+    
+    
+    
+
 
 
 
