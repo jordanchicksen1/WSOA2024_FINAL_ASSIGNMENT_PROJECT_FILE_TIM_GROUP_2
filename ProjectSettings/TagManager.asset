@@ -6,6 +6,13 @@ TagManager:
   tags:
   - player1token
   - player2token
+  - triangle
+  - trigger1
+  - trigger2
+  - universalTokenBottom
+  - universalTokenTop
+  - universalTokenLeft
+  - universalTokenRight
   layers:
   - Default
   - TransparentFX
