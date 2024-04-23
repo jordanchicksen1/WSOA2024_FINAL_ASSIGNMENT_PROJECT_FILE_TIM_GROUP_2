@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class tokenCounter : MonoBehaviour
     public int player2tokens;
     public Text player1Text;
     public Text player2Text;
+    public titleScreen titleScreen;
 
     [ContextMenu("decrease p1 token")]
     public void decreaseP1Tokens()
@@ -27,15 +29,16 @@ public class tokenCounter : MonoBehaviour
         player2Text.text = player2tokens.ToString("0");
         return;
     }
+    
+    //void gameDraw()
+    //{
+    //   if(player1tokens > 9 && player2tokens > 9)
+    //   {
+    //      titleScreen.Draw();
+    //   }
+    //}
 
-
-    public GameObject drawScrren; 
-
-    public void Draw() 
-    {
-     drawScrren.SetActive(true);
-    }
-    //if (player1tokens< 1 &&   player2tokens< 0)
+    
 
 
 
