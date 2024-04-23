@@ -34,8 +34,9 @@ public class grid : MonoBehaviour
     //}
     public tokenCounter tokenCounter;
     public GameObject triangle;
+   
   
-    private void OnTriggerEnter2D(Collider2D coll)
+     void OnTriggerEnter2D(Collider2D coll)
     {
        
         coll.transform.position= transform.position;

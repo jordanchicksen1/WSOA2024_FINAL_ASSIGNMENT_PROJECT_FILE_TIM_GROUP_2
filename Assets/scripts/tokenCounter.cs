@@ -30,13 +30,13 @@ public class tokenCounter : MonoBehaviour
         return;
     }
     
-    //void gameDraw()
-    //{
-    //   if(player1tokens > 9 && player2tokens > 9)
-    //   {
-    //      titleScreen.Draw();
-    //   }
-    //}
+    public void gameDraw()
+    {
+      if(player1tokens == 0 && player2tokens == 0)
+      {
+         titleScreen.Draw();
+      }
+    }
 
     
 
