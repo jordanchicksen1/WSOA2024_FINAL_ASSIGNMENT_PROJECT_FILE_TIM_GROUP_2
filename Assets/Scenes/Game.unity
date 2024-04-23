@@ -289,7 +289,7 @@ GameObject:
   - component: {fileID: 79841344}
   - component: {fileID: 79841343}
   m_Layer: 5
-  m_Name: you lose
+  m_Name: draw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.78867924, g: 0.21279456, b: 0.21279456, a: 1}
+  m_Color: {r: 0.7882353, g: 0.51495355, b: 0.21176468, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -347,7 +347,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lmao You Loose
+  m_Text: Draw
 --- !u!222 &79841344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1597,7 +1597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -16, y: -99}
+  m_AnchoredPosition: {x: -16, y: -20.641}
   m_SizeDelta: {x: 184.2315, y: 58.7188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &597244537
@@ -1643,7 +1643,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 597244538}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1871720753}
+        m_TargetAssemblyTypeName: titleScreen, Assembly-CSharp
+        m_MethodName: playGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &597244538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2828,7 +2840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4792453, g: 0.19802777, b: 0.19802777, a: 1}
+  m_Color: {r: 0.78823537, g: 0.5137255, b: 0.20784315, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4121,6 +4133,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1125236524923681336, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
   m_PrefabInstance: {fileID: 2097041332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1871720752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871720754}
+  - component: {fileID: 1871720753}
+  m_Layer: 0
+  m_Name: screenManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1871720753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871720752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b35af953ae054e4db4bd2aad26a28a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1871720754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871720752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.4706235, y: 3.122855, z: 0.7169436}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1926042822
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,7 +4463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016093309}
   m_Layer: 5
-  m_Name: LoseScreen
+  m_Name: Drawscreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5087,6 +5143,7 @@ MonoBehaviour:
   player2tokens: 10
   player1Text: {fileID: 878726733}
   player2Text: {fileID: 772981273}
+  drawScrren: {fileID: 2016093308}
 --- !u!4 &2088485038
 Transform:
   m_ObjectHideFlags: 0
@@ -6001,3 +6058,4 @@ SceneRoots:
   - {fileID: 2075903762}
   - {fileID: 2088485038}
   - {fileID: 2049868786023495735}
+  - {fileID: 1871720754}
