@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
-public class grid : MonoBehaviour
+public class grid : MonoBehaviour, IPointerClickHandler
 {
     //public bool gridPiece = false;
 
@@ -34,7 +35,12 @@ public class grid : MonoBehaviour
     //}
     public tokenCounter tokenCounter;
     public GameObject triangle;
-  
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D coll)
     {
        

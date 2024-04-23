@@ -33,7 +33,7 @@ public class tokenCounter : MonoBehaviour
 
     public void Draw() 
     {
-     drawScrren.SetActive(true);
+        drawScrren.SetActive(true);
     }
     //if (player1tokens< 1 &&   player2tokens< 0)
 
