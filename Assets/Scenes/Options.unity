@@ -592,7 +592,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1976098044}
         m_TargetAssemblyTypeName: titleScreen, Assembly-CSharp
-        m_MethodName: playGame
+        m_MethodName: backToTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -840,6 +840,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b35af953ae054e4db4bd2aad26a28a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1turnScreen: {fileID: 0}
+  p2turnScreen: {fileID: 0}
+  drawScreen: {fileID: 0}
 --- !u!4 &1976098045
 Transform:
   m_ObjectHideFlags: 0
