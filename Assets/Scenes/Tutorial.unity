@@ -2182,8 +2182,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.8, y: 11.7}
-  m_SizeDelta: {x: 225.93, y: 40.8545}
+  m_AnchoredPosition: {x: -50.8, y: 7.4464}
+  m_SizeDelta: {x: 225.93, y: 49.3617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901059039
 MonoBehaviour:
@@ -2218,7 +2218,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The space where players can place tokens. Can be rotated by players.
+  m_Text: The space where players can place tokens. (are supposed to be rotatable,
+    but haven't figured it out yet).
 --- !u!222 &1901059040
 CanvasRenderer:
   m_ObjectHideFlags: 0
