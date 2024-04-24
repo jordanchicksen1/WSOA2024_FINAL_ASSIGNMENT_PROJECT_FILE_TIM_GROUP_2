@@ -783,9 +783,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Univeral: {fileID: 195412789}
-  P1: {fileID: 0}
-  P2: {fileID: 0}
-  direction: {x: 0, y: 0, z: 0}
+  P1: {fileID: 6099555156367073266, guid: c6776248b12679444b1cbc659b628b42, type: 3}
+  P2: {fileID: 8913108440767787884, guid: ad9a79ad0fbfa104598a248d72da35c6, type: 3}
+  direction: {x: 0.7388, y: -1.7217, z: 0}
 --- !u!1 &236173514
 GameObject:
   m_ObjectHideFlags: 0
