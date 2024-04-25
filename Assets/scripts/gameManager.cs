@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class gameManager : MonoBehaviour
 {
@@ -11,10 +12,16 @@ public class gameManager : MonoBehaviour
     public titleScreen titleScreen;
     public AudioSource src;
     public AudioClip sfx1;
-
+    //int[,] boardUpState; //0 is empty, 1 is the universal token, 2 is player1 and 3 is player2
+    //public int boardUpHeight = 3;
+    //public int boardUpWidth = 3;
+    //// 0 0 0
+    // 0 0 0
+    // 0 0 0
     void Start()
     {
         titleScreen.p1Turn();
+        //boardUpState = new int[boardUpHeight, boardUpWidth];
     }
     void Update()
     {
@@ -48,4 +55,18 @@ public class gameManager : MonoBehaviour
        }
 
     }
+
+    //void UpdateBoardUpState()
+    //{
+    //    for (int row = 0;row < boardUpHeight; row++)
+    //    {
+    //        if (boardUpHeight[column,row] == 0)
+    //        {
+    //            if (player1)
+    //            {
+    //                boardUpState[Column, row] = 2;
+    //            }
+    //        }
+    //    }
+    //}
 }
