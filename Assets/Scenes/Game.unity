@@ -4200,7 +4200,7 @@ MonoBehaviour:
   p2token: {fileID: 8913108440767787884, guid: ad9a79ad0fbfa104598a248d72da35c6, type: 3}
   titleScreen: {fileID: 1871720753}
   src: {fileID: 557112803}
-  sfx1: {fileID: 8300000, guid: ada9c8eb8c3ccb8408356f517b1834a8, type: 3}
+  sfx1: {fileID: 8300000, guid: 8a2ee5f13531a474f9ecfc3814dae765, type: 3}
 --- !u!4 &1450477616
 Transform:
   m_ObjectHideFlags: 0
