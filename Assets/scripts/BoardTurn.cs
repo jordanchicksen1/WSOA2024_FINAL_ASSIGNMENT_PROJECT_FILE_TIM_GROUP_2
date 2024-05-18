@@ -4,20 +4,28 @@ using UnityEngine;
 
 public class BoardTurn : MonoBehaviour
 {
-    //public GameObject board1;
-    //public GameObject board2;
-    //public GameObject board3;
-    //public GameObject board4;
+    public GameObject board;
+    
 
-    //public float spin = 90f;
+    public float Left = 90f;
+    public float Right = -90f;
 
-    //public void B1Left() 
-    //{
+    public void TurnLeft()
+    {
 
-    //    board1.transform.Rotate(0, 0, spin);
-     
-    //    //transform.RotateAround(board1.transform.position,Vector3.right,spin * Time.deltaTime);
-    //    Debug.Log("roate");
+        board.transform.Rotate(0, 0, Left);
+
+        transform.RotateAround(board.transform.position,Vector3.right,Left * Time.deltaTime);
+        Debug.Log("Left");
+    }
+
+    public void TurnRight()
+    {
+        board.transform.Rotate(0, 0, Right);
+
+        transform.RotateAround(board.transform.position, Vector3.right, Right * Time.deltaTime);
+        Debug.Log("Right");
+    }
  }
 
    
