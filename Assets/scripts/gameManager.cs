@@ -123,31 +123,44 @@ public class gameManager : MonoBehaviour
 
     private void PlayerTwoTurn()
     {
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 offset = new Vector3(0, 0, 10);
-        Instantiate(p2token, pos + offset, Quaternion.identity);
-        Debug.Log("right click");
-        playerTurn = PlayerTurn.Player1;
-        titleScreen.p1Turn();
-        titleScreen.p2TurnFalse();
-        tokenCounter.decreaseP2Tokens();
-        src.clip = sfx1;
-        src.Play();
-//iPointerDown
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+        GameObject clickedObject = hit.collider.gameObject;
+        if (clickedObject.CompareTag("gridPiece"))
+        {
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 offset = new Vector3(0, 0, 10);
+            Instantiate(p2token, pos + offset, Quaternion.identity, clickedObject.transform.parent);
+            Debug.Log("right click");
+            playerTurn = PlayerTurn.Player1;
+            titleScreen.p1Turn();
+            titleScreen.p2TurnFalse();
+            tokenCounter.decreaseP2Tokens();
+            src.clip = sfx1;
+            src.Play();
+        }
     }
 
     private void PlayerOneTurn()
     {
-        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 offset = new Vector3(0, 0, 10);
-        Instantiate(p1token, pos + offset, Quaternion.identity);
-        Debug.Log("left click");
-        playerTurn = PlayerTurn.Player2;
-        titleScreen.p1TurnFalse();
-        titleScreen.p2Turn();
-        tokenCounter.decreaseP1Tokens();
-        src.clip = sfx1;
-        src.Play();
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+        GameObject clickedObject = hit.collider.gameObject;
+        if (clickedObject.CompareTag("gridPiece"))
+        {
+            
+            Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 offset = new Vector3(0, 0, 10);
+            Instantiate(p1token, pos + offset, Quaternion.identity, clickedObject.transform.parent);
+            Debug.Log("left click");
+            playerTurn = PlayerTurn.Player2;
+            titleScreen.p1TurnFalse();
+            titleScreen.p2Turn();
+            tokenCounter.decreaseP1Tokens();
+            src.clip = sfx1;
+            src.Play();
+        }
+        
     }
 }
 
