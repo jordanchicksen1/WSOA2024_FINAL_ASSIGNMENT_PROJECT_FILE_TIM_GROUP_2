@@ -8694,6 +8694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: universal player board
       objectReference: {fileID: 0}
+    - target: {fileID: 6409152917036850627, guid: e31c557fffe050e45811714e950dbc81, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8907996452088284695, guid: e31c557fffe050e45811714e950dbc81, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.33

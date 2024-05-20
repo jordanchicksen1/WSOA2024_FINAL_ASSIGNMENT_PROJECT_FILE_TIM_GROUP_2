@@ -7,6 +7,10 @@ public class gameManager : MonoBehaviour
 {
     public GameObject p1token;
     public GameObject p2token;
+    /*public GameObject parentTop;
+    public GameObject parentLeft;
+    public GameObject parentRight;
+    public GameObject parentBottom;*/
     //bool player1 = true;
    // bool player2 = false;
     public titleScreen titleScreen;
@@ -129,6 +133,7 @@ public class gameManager : MonoBehaviour
         tokenCounter.decreaseP2Tokens();
         src.clip = sfx1;
         src.Play();
+//iPointerDown
     }
 
     private void PlayerOneTurn()
