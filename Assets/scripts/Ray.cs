@@ -63,7 +63,7 @@ public class UniversalCheck : MonoBehaviour
             Renderer.color = Color.cyan;
         }*/
 
-        RaycastHit2D[] hits;
+        /*RaycastHit2D[] hits;
         hits = Physics2D.RaycastAll(transform.position, Vector2.right);
 
         for (int i = 0; i < hits.Length; i++) 
@@ -78,6 +78,6 @@ public class UniversalCheck : MonoBehaviour
             }
 
            
-        }
+        }*/
     }
 }

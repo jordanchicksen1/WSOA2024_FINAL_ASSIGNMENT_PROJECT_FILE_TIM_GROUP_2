@@ -18,7 +18,6 @@ public class tokenCounter : MonoBehaviour
     {
         player1tokens = player1tokens - 1;
         player1Text.text = player1tokens.ToString("0");
-
         return;
     }
 

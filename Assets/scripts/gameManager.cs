@@ -12,30 +12,30 @@ public class gameManager : MonoBehaviour
     public titleScreen titleScreen;
     public AudioSource src;
     public AudioClip sfx1;
+    public tokenCounter tokenCounter;
 
-   
     //int[,] boardUpState; //0 is empty, 1 is the universal token, 2 is player1 and 3 is player2
     //public int boardUpHeight = 3;
     //public int boardUpWidth = 3;
     //// 0 0 0
     // 0 0 0
     // 0 0 0
-//<<<<<<< Updated upstream
-    
-        
-        //boardUpState = new int[boardUpHeight, boardUpWidth];
-    
-    
-//======
+    //<<<<<<< Updated upstream
+
+
+    //boardUpState = new int[boardUpHeight, boardUpWidth];
+
+
+    //======
     //void Start()
     //{
     //    titleScreen.p1Turn();
-        
+
     //    //boardUpState = new int[boardUpHeight, boardUpWidth];
     //}
     //void Update()
     //{
-      
+
     //   if (Input.GetMouseButtonDown(0) && player1 == true)
     //   {
     //       Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -49,8 +49,8 @@ public class gameManager : MonoBehaviour
     //        src.clip = sfx1;
     //        src.Play();
 
-       
-            
+
+
     //   }
 
     //   if (Input.GetMouseButtonDown(1) && player2 == true)
@@ -68,7 +68,7 @@ public class gameManager : MonoBehaviour
     //   }
 
     //}
-//>>>>>>> Stashed changes
+    //>>>>>>> Stashed changes
 
     //void UpdateBoardUpState()
     //{
@@ -83,6 +83,8 @@ public class gameManager : MonoBehaviour
     //        }
     //    }
     //}
+
+  
     private enum PlayerTurn
     {
         Nothing,
@@ -124,6 +126,7 @@ public class gameManager : MonoBehaviour
         playerTurn = PlayerTurn.Player1;
         titleScreen.p1Turn();
         titleScreen.p2TurnFalse();
+        tokenCounter.decreaseP2Tokens();
         src.clip = sfx1;
         src.Play();
     }
@@ -137,6 +140,7 @@ public class gameManager : MonoBehaviour
         playerTurn = PlayerTurn.Player2;
         titleScreen.p1TurnFalse();
         titleScreen.p2Turn();
+        tokenCounter.decreaseP1Tokens();
         src.clip = sfx1;
         src.Play();
     }
