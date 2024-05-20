@@ -861,10 +861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6940b4ec0c4913a44af4af82f1ea44fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Univeral: {fileID: 195412789}
-  P1: {fileID: 6099555156367073266, guid: c6776248b12679444b1cbc659b628b42, type: 3}
-  P2: {fileID: 8913108440767787884, guid: ad9a79ad0fbfa104598a248d72da35c6, type: 3}
-  direction: {x: 0.7388, y: -1.7217, z: 0}
+  Renderer: {fileID: 0}
+  circle: {fileID: 0}
 --- !u!1 &236173514
 GameObject:
   m_ObjectHideFlags: 0
@@ -6467,7 +6465,7 @@ MonoBehaviour:
   player2tokens: 10
   player1Text: {fileID: 878726733}
   player2Text: {fileID: 772981273}
-  titleScreen: {fileID: 1871720753}
+  titleScreen: {fileID: 0}
 --- !u!4 &2088485038
 Transform:
   m_ObjectHideFlags: 0
