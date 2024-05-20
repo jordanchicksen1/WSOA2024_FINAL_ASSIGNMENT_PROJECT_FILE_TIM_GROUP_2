@@ -119,6 +119,10 @@ public class gameManager : MonoBehaviour
                     break;
             }
         }
+        /*else
+        {
+            return;
+        }*/
     }
 
     private void PlayerTwoTurn()
@@ -139,6 +143,10 @@ public class gameManager : MonoBehaviour
             src.clip = sfx1;
             src.Play();
         }
+        /*else
+        {
+            return;
+        }*/
     }
 
     private void PlayerOneTurn()
@@ -160,6 +168,10 @@ public class gameManager : MonoBehaviour
             src.clip = sfx1;
             src.Play();
         }
+        /*else 
+        { 
+            return; 
+        }*/
         
     }
 }

@@ -9,7 +9,9 @@ public class BoardTurn : MonoBehaviour
     public GameObject boardBottom;
     public GameObject boardLeft;
     public GameObject boardRight;
-    
+    public AudioSource src;
+    public AudioClip sfx1;
+
 
     public float Left = 90f;
     public float Right = -90f;
@@ -21,6 +23,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardTop.transform.position,Vector3.right,Left * Time.deltaTime);
         Debug.Log("Left");
+        src.clip = sfx1;
+        src.Play();
     }
 
     public void TurnRight()
@@ -29,6 +33,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardTop.transform.position, Vector3.right, Right * Time.deltaTime);
         Debug.Log("Right");
+        src.clip = sfx1;
+        src.Play();
     }
 
     public void TurnLeftBoardBottom()
@@ -38,6 +44,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardBottom.transform.position, Vector3.right, Left * Time.deltaTime);
         Debug.Log("Left");
+        src.clip = sfx1;
+        src.Play();
     }
 
     public void TurnRightBoardBottom()
@@ -46,6 +54,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardBottom.transform.position, Vector3.right, Right * Time.deltaTime);
         Debug.Log("Right");
+        src.clip = sfx1;
+        src.Play();
     }
 
     public void TurnLeftBoardLeft()
@@ -55,6 +65,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardLeft.transform.position, Vector3.right, Left * Time.deltaTime);
         Debug.Log("Left");
+        src.clip = sfx1;
+        src.Play();
     }
 
     public void TurnRightBoardLeft()
@@ -63,6 +75,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardLeft.transform.position, Vector3.right, Right * Time.deltaTime);
         Debug.Log("Right");
+        src.clip = sfx1;
+        src.Play();
     }
 
     public void TurnLeftBoardRight()
@@ -72,6 +86,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardRight.transform.position, Vector3.right, Left * Time.deltaTime);
         Debug.Log("Left");
+        src.clip = sfx1;
+        src.Play();
     }
 
     public void TurnRightBoardRight()
@@ -80,6 +96,8 @@ public class BoardTurn : MonoBehaviour
 
         transform.RotateAround(boardRight.transform.position, Vector3.right, Right * Time.deltaTime);
         Debug.Log("Right");
+        src.clip = sfx1;
+        src.Play();
     }
 }
 
