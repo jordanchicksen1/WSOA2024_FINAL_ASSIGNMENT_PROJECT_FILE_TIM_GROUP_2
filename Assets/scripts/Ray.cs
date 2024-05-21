@@ -6,8 +6,8 @@ using UnityEngine.EventSystems;
 public class UniversalCheck : MonoBehaviour
 {
 
-    public SpriteRenderer Renderer;
-    public GameObject circle;
+    //public SpriteRenderer Renderer;
+    //public GameObject circle;
     /*Ray rayDown;
     RaycastHit[] hit;
 
@@ -30,6 +30,11 @@ public class UniversalCheck : MonoBehaviour
              Debug.Log("hit");
          }
     }*/
+
+
+ 
+
+    public float Distance;
 
     private void FixedUpdate()
     {
@@ -63,21 +68,27 @@ public class UniversalCheck : MonoBehaviour
             Renderer.color = Color.cyan;
         }*/
 
-        RaycastHit2D[] hits;
-        hits = Physics2D.RaycastAll(transform.position, Vector2.right);
+        /* RaycastHit2D[] hits;
+         hits = Physics2D.RaycastAll(transform.position, Vector2.right);
 
-        for (int i = 0; i < hits.Length; i++) 
-        {
-        RaycastHit2D hit = hits[i];
-        Renderer rend =hit.transform.GetComponent<Renderer>();
+         for (int i = 0; i < hits.Length; i++) 
+         {
+         RaycastHit2D hit = hits[i];
+         Renderer rend =hit.transform.GetComponent<Renderer>();
 
-            if (rend) 
-            {
-                Debug.Log("hit");
-                //Renderer.color = Color.blue;
-            }
+             if (rend) 
+             {
+                 Debug.Log("hit");
+                 //Renderer.color = Color.blue;
+             }
 
-           
-        }
+
+
+
+         }*/
+     
+     
+      
+
     }
 }

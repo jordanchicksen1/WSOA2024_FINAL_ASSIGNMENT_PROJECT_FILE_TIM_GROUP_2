@@ -948,8 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6940b4ec0c4913a44af4af82f1ea44fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Renderer: {fileID: 0}
-  circle: {fileID: 0}
+  Distance: 0
 --- !u!1 &236173514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8303,6 +8302,10 @@ PrefabInstance:
     - target: {fileID: 8601802071284229472, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
       propertyPath: m_Size.y
       value: 0.934681
+      objectReference: {fileID: 0}
+    - target: {fileID: 8601802071284229472, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8601802071284229472, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
       propertyPath: m_Offset.x
