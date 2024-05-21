@@ -15,6 +15,7 @@ TagManager:
   - universalTokenRight
   - gridPiece
   - universalToken
+  - background
   layers:
   - Default
   - TransparentFX
