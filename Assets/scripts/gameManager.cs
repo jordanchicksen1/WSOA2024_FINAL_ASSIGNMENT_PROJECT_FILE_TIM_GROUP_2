@@ -131,7 +131,7 @@ public class gameManager : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         GameObject clickedObject = hit.collider.gameObject;
-        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0)
+        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player2tokens > 0.99)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 offset = new Vector3(0, 0, 10);
@@ -153,7 +153,7 @@ public class gameManager : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         GameObject clickedObject = hit.collider.gameObject;
-        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0)
+        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player1tokens > 0.99)
         {
 
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
