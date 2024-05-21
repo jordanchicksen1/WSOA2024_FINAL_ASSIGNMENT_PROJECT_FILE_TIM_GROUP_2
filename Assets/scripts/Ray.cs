@@ -86,9 +86,10 @@ public class UniversalCheck : MonoBehaviour
 
 
          }*/
-     
-     
-      
+
+
+        //RaycastHit2D RayCastAll = new Ray(15f, 15f, 15f);
+           // Ray ray = new Ray(transform.position, transform.forward);
 
     }
 }

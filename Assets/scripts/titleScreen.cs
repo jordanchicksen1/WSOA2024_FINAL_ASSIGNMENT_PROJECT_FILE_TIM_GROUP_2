@@ -52,8 +52,18 @@ public class titleScreen : MonoBehaviour
         p2turnScreen.SetActive(false);
     }
 
-    public void Draw()
+    public void playerOneWins()
     {
-        drawScreen.SetActive(true);
+        SceneManager.LoadScene("P1 Win Scene");
+    }
+
+    public void playerTwoWins()
+    {
+        SceneManager.LoadScene("P2 Win Scene");
+    }
+
+    public void drawScene()
+    {
+        SceneManager.LoadScene("Draw Scene");
     }
 }
