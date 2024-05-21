@@ -66,4 +66,9 @@ public class titleScreen : MonoBehaviour
     {
         SceneManager.LoadScene("Draw Scene");
     }
-}
+
+    public void mainMenu()
+    {
+        SceneManager.LoadScene("Title Screen");
+    }
+    }
