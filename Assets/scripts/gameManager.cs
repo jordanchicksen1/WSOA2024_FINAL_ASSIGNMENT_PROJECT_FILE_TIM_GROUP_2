@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -18,7 +19,8 @@ public class gameManager : MonoBehaviour
     public AudioSource src;
     public AudioClip sfx1;
     public tokenCounter tokenCounter;
-
+    public bool p1NoTokens = false;
+    public bool p2NoTokens = false;
     //int[,] boardUpState; //0 is empty, 1 is the universal token, 2 is player1 and 3 is player2
     //public int boardUpHeight = 3;
     //public int boardUpWidth = 3;
@@ -144,6 +146,12 @@ public class gameManager : MonoBehaviour
             src.clip = sfx1;
             src.Play();
         }
+
+        //if(tokenCounter.player2tokens == 0)
+        //{
+        //    p2NoTokens = true;
+        //    Debug.Log("player 2 no tokens left");
+        //}
     }
     
 
@@ -168,6 +176,21 @@ public class gameManager : MonoBehaviour
             src.Play();
         }
 
+        //if(tokenCounter.player1tokens == 0)
+        //{
+        //    p1NoTokens = true;
+        //    Debug.Log("player 1 no tokens left");
+        //}
     }
+
+    //public void showDrawScreen()
+    //{
+    //    if (p1NoTokens == true & p2NoTokens == true) 
+    //    {
+    //        Debug.Log("show draw screen");
+    //        titleScreen.drawScene();
+    //    }
+    //}
+
 }
 

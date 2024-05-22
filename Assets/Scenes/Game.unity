@@ -5600,6 +5600,8 @@ MonoBehaviour:
   src: {fileID: 557112803}
   sfx1: {fileID: 8300000, guid: 8a2ee5f13531a474f9ecfc3814dae765, type: 3}
   tokenCounter: {fileID: 2088485037}
+  p1NoTokens: 0
+  p2NoTokens: 0
 --- !u!4 &1450477616
 Transform:
   m_ObjectHideFlags: 0
@@ -6977,6 +6979,7 @@ MonoBehaviour:
   p1turnScreen: {fileID: 600708898}
   p2turnScreen: {fileID: 303111210}
   drawScreen: {fileID: 2016093308}
+  gameManager: {fileID: 1450477615}
 --- !u!4 &1871720754
 Transform:
   m_ObjectHideFlags: 0

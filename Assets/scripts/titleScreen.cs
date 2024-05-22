@@ -9,6 +9,7 @@ public class titleScreen : MonoBehaviour
     public GameObject p1turnScreen;
     public GameObject p2turnScreen;
     public GameObject drawScreen;
+    public gameManager gameManager;
     public void playGame()
     {
         SceneManager.LoadScene("Game");
