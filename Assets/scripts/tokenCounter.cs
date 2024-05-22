@@ -43,7 +43,10 @@ public class tokenCounter : MonoBehaviour
         }
 
     }
-    
+    void Update()
+    {
+        gameDraw();
+    }
     public void gameDraw()
     {
       if(p1NoTokens == true &&  p2NoTokens == true) 
