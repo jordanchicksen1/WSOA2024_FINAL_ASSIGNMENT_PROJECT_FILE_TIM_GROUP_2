@@ -1,13 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
-    public GameObject p1token;
-    public GameObject p2token;
+    public Token p1token;
+    public Token p2token;
+
+    [SerializeField]
+    private UnityEvent<Token> tokenPlaced;
+    
+    
     //public GameObject clickedObject;
     /*public GameObject parentTop;
     public GameObject parentLeft;
@@ -101,7 +108,12 @@ public class gameManager : MonoBehaviour
 
     private PlayerTurn playerTurn;
 
-     void Start()
+    public void PlayerWon(Token token)
+    {
+       Debug.Log($"<color=green>Player {token.PlayerNumber} has won!</color>"); 
+    }
+
+    private void Start()
     {
         playerTurn = PlayerTurn.Player1;
         titleScreen.p1Turn();
@@ -137,7 +149,9 @@ public class gameManager : MonoBehaviour
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 offset = new Vector3(0, 0, 10);
-            Instantiate(p2token, pos + offset, Quaternion.identity, clickedObject.transform);
+            Token clone = Instantiate(p2token, pos + offset, Quaternion.identity, clickedObject.transform);
+            tokenPlaced.Invoke(clone);
+            
             Debug.Log("right click");
             playerTurn = PlayerTurn.Player1;
             titleScreen.p1Turn();
@@ -154,7 +168,7 @@ public class gameManager : MonoBehaviour
         //}
     }
     
-
+    
 
     private void PlayerOneTurn()
     {
@@ -166,7 +180,8 @@ public class gameManager : MonoBehaviour
 
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 offset = new Vector3(0, 0, 10);
-            Instantiate(p1token, pos + offset, Quaternion.identity, clickedObject.transform);
+            var clone = Instantiate(p1token, pos + offset, Quaternion.identity, clickedObject.transform);
+            tokenPlaced.Invoke(clone);
             Debug.Log("left click");
             playerTurn = PlayerTurn.Player2;
             titleScreen.p1TurnFalse();
