@@ -38,13 +38,13 @@ public class gameManager : MonoBehaviour
 
         if (token.PlayerNumber == PlayerToken.PlayerOne) 
         {
-            //SceneManager.LoadScene("P1 Win Scene");
+            SceneManager.LoadScene("P1 Win Scene");
             Debug.Log($"<color=blue> you can put the scene transition here</color>");
         }
 
         if (token.PlayerNumber == PlayerToken.PlayerTwo)
         {
-            //SceneManager.LoadScene("P2 Win Scene");
+            SceneManager.LoadScene("P2 Win Scene");
             Debug.Log($"<color=purple> you can put the scene transition here </color>");
         }
 
