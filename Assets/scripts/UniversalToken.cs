@@ -11,13 +11,7 @@ public class UniversalToken : MonoBehaviour
     public void OnTokenPlaced(Token token)
     {
         // Token placed
-        /*Debug.Log($"{gameObject.name} -- Token: {token.name}");
         
-        var right = Physics2D.RaycastAll(transform.position, Vector3.right, raycastExtent, layerMask);
-        var left = Physics2D.RaycastAll(transform.position, Vector3.left, raycastExtent, layerMask);
-        var up = Physics2D.RaycastAll(transform.position, Vector3.up, raycastExtent, layerMask);
-        var down = Physics2D.RaycastAll(transform.position, Vector3.down, raycastExtent, layerMask);
-        */
         var layerMask = token.TokenLayerMask;
         // 45 degress
         var diagonal = new Vector3(1, 1);
@@ -29,21 +23,7 @@ public class UniversalToken : MonoBehaviour
         diagonal = new Vector3(1, -1);
         var threeFifteen = CheckForAlignedTokens(token, diagonal, layerMask);
     
-        /*// 135 degrees
-        diagonal = new Vector3(-1, 1);
-        diagonal.Normalize();
-        var oneThirtyFive = Physics2D.RaycastAll(transform.position, diagonal, raycastExtent, layerMask);
         
-        // 225 degress
-        diagonal = new Vector3(-1, -1);
-        diagonal.Normalize();
-        var twoTwentyFive = Physics2D.RaycastAll(transform.position, diagonal, raycastExtent, layerMask);
-        
-        // 315 degress
-        diagonal = new Vector3(1, -1);
-        diagonal.Normalize();
-        var threeFifteen = Physics2D.RaycastAll(transform.position, diagonal, raycastExtent, layerMask);
-        */
         
         Debug.Log($"{gameObject.name}");
         Debug.Log($"45: {fortyFive.Length}, 135: {oneThirtyFive.Length}");
@@ -65,10 +45,7 @@ public class UniversalToken : MonoBehaviour
 
     private bool HasPlayerWon(Token token, RaycastHit2D[] raycastResults)
     {
-        /*
-         * 1. Correct Length
-         * 2. Correct Tokens
-         */
+        
 
         if (raycastResults.Length < 3)
         {
