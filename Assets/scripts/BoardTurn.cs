@@ -12,7 +12,7 @@ public class BoardTurn : MonoBehaviour
     public AudioSource src;
     public AudioClip sfx1;
     public bool hasPressedButton = false;
-    
+   
 
 
     public float Left = 90f;
@@ -29,6 +29,10 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+            //universalTokenManager.OnTokenPlaced();
+
+
+           
         }
     }
 
@@ -43,6 +47,9 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
+
+            
         }
     }
 
@@ -57,6 +64,9 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
+
+            
         }
     }
 
@@ -71,6 +81,9 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
+
+            
         }
     }
 
@@ -85,11 +98,14 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
+
+
         }
     }
 
     public void TurnRightBoardLeft()
-    {   
+    {
         if (hasPressedButton == false)
         {
             boardLeft.transform.Rotate(0, 0, Right);
@@ -99,6 +115,9 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
+
+            
         }
     }
 
@@ -113,6 +132,9 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
+
+           
         }
     }
 
@@ -127,6 +149,9 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
+
+           
         }
     }
 }

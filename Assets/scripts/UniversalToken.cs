@@ -30,7 +30,7 @@ public class UniversalToken : MonoBehaviour
         Debug.Log($"225: {twoTwentyFive.Length}, 315: {threeFifteen.Length}");
     }
 
-    private RaycastHit2D[] CheckForAlignedTokens(Token token, Vector3 diagonal, LayerMask layerMask)
+    public RaycastHit2D[] CheckForAlignedTokens(Token token, Vector3 diagonal, LayerMask layerMask)
     {
         diagonal.Normalize();
         var fortyFive = Physics2D.RaycastAll(transform.position, diagonal, raycastExtent, layerMask);
