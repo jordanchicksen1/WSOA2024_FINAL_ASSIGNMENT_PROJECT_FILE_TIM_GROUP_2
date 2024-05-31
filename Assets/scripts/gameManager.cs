@@ -20,6 +20,7 @@ public class gameManager : MonoBehaviour
     public tokenCounter tokenCounter;
     public bool p1NoTokens = false;
     public bool p2NoTokens = false;
+    public BoardTurn boardTurn;
   
 
   
@@ -80,13 +81,13 @@ public class gameManager : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         GameObject clickedObject = hit.collider.gameObject;
-        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player2tokens > 0.99)
+        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player2tokens > 0.99 && boardTurn.hasPressedButton == true)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 offset = new Vector3(0, 0, 10);
             Token clone = Instantiate(p2token, pos + offset, Quaternion.identity, clickedObject.transform);
             tokenPlaced.Invoke(clone);
-            
+            boardTurn.hasPressedButton = false;
             Debug.Log("right click");
             playerTurn = PlayerTurn.Player1;
             titleScreen.p1Turn();
@@ -106,13 +107,14 @@ public class gameManager : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         GameObject clickedObject = hit.collider.gameObject;
-        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player1tokens > 0.99)
+        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player1tokens > 0.99 && boardTurn.hasPressedButton == true)
         {
 
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 offset = new Vector3(0, 0, 10);
             var clone = Instantiate(p1token, pos + offset, Quaternion.identity, clickedObject.transform);
             tokenPlaced.Invoke(clone);
+            boardTurn.hasPressedButton = false;
             Debug.Log("left click");
             playerTurn = PlayerTurn.Player2;
             titleScreen.p1TurnFalse();
