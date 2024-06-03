@@ -4,7 +4,8 @@ using UnityEngine;
 public class UniversalTokenManager : MonoBehaviour
 {
         [SerializeField]
-        public List<UniversalToken> universalTokens;
+       
+        List<UniversalToken> universalTokens;
 
         public void OnTokenPlaced(Token token)
         {
