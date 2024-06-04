@@ -59,8 +59,8 @@ public class boardLocker : MonoBehaviour
             leftRight.SetActive(true);
             rightRight.SetActive(true);
 
-            leftLeft.SetActive(true);
-            rightLeft.SetActive(true);
+            leftLeft.SetActive(false);
+            rightLeft.SetActive(false);
             Debug.Log($"<color=orange> hit left trigger </color>");
         }
 
