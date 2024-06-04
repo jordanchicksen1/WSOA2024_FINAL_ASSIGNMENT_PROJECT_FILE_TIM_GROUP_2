@@ -16,6 +16,10 @@ TagManager:
   - gridPiece
   - universalToken
   - background
+  - topTrigger
+  - rightTrigger
+  - bottomTrigger
+  - leftTrigger
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,9 @@ public class BoardTurn : MonoBehaviour
     public AudioSource src;
     public AudioClip sfx1;
     public bool hasPressedButton = false;
-   
+
+    
+
 
 
     public float Left = 90f;
@@ -20,7 +22,7 @@ public class BoardTurn : MonoBehaviour
 
     public void TurnLeft()
     {
-        if (hasPressedButton == false)
+        if (hasPressedButton == false )
         {
             boardTop.transform.Rotate(0, 0, Left);
 
@@ -29,16 +31,15 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
+
             
-
-
            
         }
     }
 
     public void TurnRight()
     {
-        if (hasPressedButton == false)
+        if (hasPressedButton == false )
         {
             boardTop.transform.Rotate(0, 0, Right);
 
@@ -48,14 +49,15 @@ public class BoardTurn : MonoBehaviour
             src.Play();
             hasPressedButton = true;
 
+           
 
-            
+
         }
     }
 
     public void TurnLeftBoardBottom()
     {
-        if (hasPressedButton == false)
+        if (hasPressedButton == false )
         {
             boardBottom.transform.Rotate(0, 0, Left);
 
@@ -72,7 +74,7 @@ public class BoardTurn : MonoBehaviour
 
     public void TurnRightBoardBottom()
     {
-        if (hasPressedButton == false)
+        if (hasPressedButton == false )
         {
             boardBottom.transform.Rotate(0, 0, Right);
 
@@ -81,15 +83,13 @@ public class BoardTurn : MonoBehaviour
             src.clip = sfx1;
             src.Play();
             hasPressedButton = true;
-
-
-            
         }
+        
     }
 
     public void TurnLeftBoardLeft()
     {
-        if (hasPressedButton == false)
+        if (hasPressedButton == false )
         {
             boardLeft.transform.Rotate(0, 0, Left);
 
@@ -123,7 +123,7 @@ public class BoardTurn : MonoBehaviour
 
     public void TurnLeftBoardRight()
     {
-        if (hasPressedButton == false)
+        if (hasPressedButton == false )
         {
             boardRight.transform.Rotate(0, 0, Left);
 
@@ -140,7 +140,7 @@ public class BoardTurn : MonoBehaviour
 
     public void TurnRightBoardRight()
     {
-        if (hasPressedButton == false)
+        if (hasPressedButton == false )
         {
             boardRight.transform.Rotate(0, 0, Right);
 
