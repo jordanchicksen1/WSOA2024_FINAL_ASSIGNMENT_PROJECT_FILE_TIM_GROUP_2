@@ -12,6 +12,7 @@ public class BoardTurn : MonoBehaviour
     public AudioSource src;
     public AudioClip sfx1;
     public bool hasPressedButton = false;
+    public UniversalToken UniversalToken;
 
     
 

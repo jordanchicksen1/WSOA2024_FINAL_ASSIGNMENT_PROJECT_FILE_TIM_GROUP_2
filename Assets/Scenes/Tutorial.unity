@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -282.3, y: 11.7}
+  m_AnchoredPosition: {x: -282.3, y: 16}
   m_SizeDelta: {x: 225.93, y: 40.8545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30088777
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Items that players place on the boards when playing the game.
+  m_Text: You place these on the board.
 --- !u!222 &30088778
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -350,8 +350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 173.00673, y: 84}
-  m_SizeDelta: {x: 146.3851, y: 98.4702}
+  m_AnchoredPosition: {x: 173.00673, y: 74.065}
+  m_SizeDelta: {x: 146.3851, y: 118.3402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &157568989
 MonoBehaviour:
@@ -386,9 +386,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Left Click:
-
-    press the buttons.'
+  m_Text: Turn a board by pressing one of the buttons. (Left click)
 --- !u!222 &157568990
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -595,7 +593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6845934060960520783, guid: c6776248b12679444b1cbc659b628b42, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.24
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 6845934060960520783, guid: c6776248b12679444b1cbc659b628b42, type: 3}
       propertyPath: m_LocalPosition.z
@@ -747,8 +745,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -237.43805, y: 5.746399}
-  m_SizeDelta: {x: 310.5198, y: 430.5071}
+  m_AnchoredPosition: {x: -237.43805, y: 198}
+  m_SizeDelta: {x: 310.5198, y: 40.001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &365031453
 MonoBehaviour:
@@ -772,7 +770,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 35
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -783,9 +781,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Components:
-
-'
+  m_Text: 'Game elements:'
 --- !u!222 &365031454
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -912,7 +908,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -67, y: 38.601}
+  m_AnchoredPosition: {x: -67, y: 47}
   m_SizeDelta: {x: 199.5216, y: 252.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776874287
@@ -1038,8 +1034,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This object turns every time a player places a token, and locks the player
-    board that it is pointing at from rotating.
+  m_Text: Rotates clockwise every turn, and stops the board that it's point at from
+    rotating.
 --- !u!222 &784753290
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1195,7 +1191,7 @@ Transform:
   m_GameObject: {fileID: 963131785}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.4, y: 0.95, z: 0}
+  m_LocalPosition: {x: 3.4, y: 0.00999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1227,7 +1223,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3804430536774243019, guid: ad9a79ad0fbfa104598a248d72da35c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.2389998
+      value: -0.011000156
       objectReference: {fileID: 0}
     - target: {fileID: 3804430536774243019, guid: ad9a79ad0fbfa104598a248d72da35c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1340,9 +1336,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Right Click:
+  m_Text: 'Place your tokens on the board.
 
-    place tokens.'
+    (Right click)'
 --- !u!222 &1081405406
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1825,7 +1821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280.62, y: 38.60102}
+  m_AnchoredPosition: {x: -280.62, y: 47}
   m_SizeDelta: {x: 227.71, y: 252.9109}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709734662
@@ -2034,8 +2030,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50.8, y: 7.4464}
-  m_SizeDelta: {x: 225.93, y: 49.3617}
+  m_AnchoredPosition: {x: -50.8, y: 13}
+  m_SizeDelta: {x: 225.93, y: 60.0045}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901059039
 MonoBehaviour:
@@ -2070,8 +2066,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The space where players can place tokens. Rotate them by either clicking
-    the left or right button.
+  m_Text: The space for you to place your tokens. Can be rotated clockwise and anti-clockwise
+    so that tokens can be lined up.
 --- !u!222 &1901059040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2158,7 +2154,7 @@ Transform:
   m_GameObject: {fileID: 1901187663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.79, y: 0.96, z: 0}
+  m_LocalPosition: {x: 2.79, y: 0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2234,8 +2230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A token that is already placed on the boards that players need to line
-    their tokens up with to win.
+  m_Text: Line three of your player tokens up with this to win.
 --- !u!222 &1906188598
 CanvasRenderer:
   m_ObjectHideFlags: 0

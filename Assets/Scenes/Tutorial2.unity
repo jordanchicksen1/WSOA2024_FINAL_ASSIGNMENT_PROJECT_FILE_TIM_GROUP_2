@@ -689,8 +689,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00038218, y: 148.45}
-  m_SizeDelta: {x: 800, y: 105.43}
+  m_AnchoredPosition: {x: 0.00038218, y: 189.53929}
+  m_SizeDelta: {x: 800, y: 23.2514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &768868762
 MonoBehaviour:
@@ -725,7 +725,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Place your tokens and rotate your boards, to line them up with the universal
+  m_Text: Rotate your boards then place your tokens, to line them up with the universal
     token to win the game!
 --- !u!222 &768868763
 CanvasRenderer:
@@ -1463,7 +1463,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Overview:
+  m_Text: 'Gameplay:
 
 '
 --- !u!222 &1288467828
