@@ -6126,6 +6126,10 @@ PrefabInstance:
       propertyPath: tokenCounter
       value: 
       objectReference: {fileID: 2088485037}
+    - target: {fileID: 8904323470237932561, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
+      propertyPath: m_TagString
+      value: universalGrid
+      objectReference: {fileID: 0}
     - target: {fileID: 9098826784148841843, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
       propertyPath: triangle
       value: 
@@ -8183,6 +8187,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.0044080615
       objectReference: {fileID: 0}
+    - target: {fileID: 5608865911688616655, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
+      propertyPath: m_TagString
+      value: universalGrid
+      objectReference: {fileID: 0}
     - target: {fileID: 6262682710403272755, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
       propertyPath: triangle
       value: 
@@ -8549,6 +8557,10 @@ PrefabInstance:
       propertyPath: tokenCounter
       value: 
       objectReference: {fileID: 2088485037}
+    - target: {fileID: 1236350821714356360, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
+      propertyPath: m_TagString
+      value: universalGrid
+      objectReference: {fileID: 0}
     - target: {fileID: 1464375825323182566, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -9157,6 +9169,10 @@ PrefabInstance:
     - target: {fileID: 2496800774776754145, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2608448551253447768, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
+      propertyPath: m_TagString
+      value: universalGrid
       objectReference: {fileID: 0}
     - target: {fileID: 3524324369158558406, guid: 53ef27ec6c8b6ac4e9c0436a29526060, type: 3}
       propertyPath: m_Sprite

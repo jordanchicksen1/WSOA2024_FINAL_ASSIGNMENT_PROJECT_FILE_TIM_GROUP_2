@@ -20,6 +20,7 @@ TagManager:
   - rightTrigger
   - bottomTrigger
   - leftTrigger
+  - universalGrid
   layers:
   - Default
   - TransparentFX
