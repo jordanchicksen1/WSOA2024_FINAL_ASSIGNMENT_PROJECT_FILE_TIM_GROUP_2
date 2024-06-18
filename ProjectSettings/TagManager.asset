@@ -16,6 +16,11 @@ TagManager:
   - gridPiece
   - universalToken
   - background
+  - topTrigger
+  - rightTrigger
+  - bottomTrigger
+  - leftTrigger
+  - universalGrid
   layers:
   - Default
   - TransparentFX
@@ -23,9 +28,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - UniversalToken
+  - Player1Token
+  - Player2Token
   - 
   - 
   - 

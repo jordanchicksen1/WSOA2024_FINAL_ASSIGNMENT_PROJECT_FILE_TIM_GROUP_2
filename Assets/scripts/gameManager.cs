@@ -1,95 +1,27 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using static Token;
 
 public class gameManager : MonoBehaviour
 {
-    public GameObject p1token;
-    public GameObject p2token;
-    //public GameObject clickedObject;
-    /*public GameObject parentTop;
-    public GameObject parentLeft;
-    public GameObject parentRight;
-    public GameObject parentBottom;*/
-    //bool player1 = true;
-   // bool player2 = false;
+    public Token p1token;
+    public Token p2token;
+
+    [SerializeField]
+    private UnityEvent<Token> tokenPlaced;
     public titleScreen titleScreen;
     public AudioSource src;
     public AudioClip sfx1;
     public tokenCounter tokenCounter;
     public bool p1NoTokens = false;
     public bool p2NoTokens = false;
-    //int[,] boardUpState; //0 is empty, 1 is the universal token, 2 is player1 and 3 is player2
-    //public int boardUpHeight = 3;
-    //public int boardUpWidth = 3;
-    //// 0 0 0
-    // 0 0 0
-    // 0 0 0
-    //<<<<<<< Updated upstream
-
-
-    //boardUpState = new int[boardUpHeight, boardUpWidth];
-
-
-    //======
-    //void Start()
-    //{
-    //    titleScreen.p1Turn();
-
-    //    //boardUpState = new int[boardUpHeight, boardUpWidth];
-    //}
-    //void Update()
-    //{
-
-    //   if (Input.GetMouseButtonDown(0) && player1 == true)
-    //   {
-    //       Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //       Vector3 offset = new Vector3(0, 0, 10);
-    //       Instantiate(p1token, pos + offset, Quaternion.identity);
-    //       Debug.Log("left click");
-    //        player1 = false;
-    //        player2 = true;
-    //        titleScreen.p1TurnFalse();
-    //        titleScreen.p2Turn();
-    //        src.clip = sfx1;
-    //        src.Play();
-
-
-
-    //   }
-
-    //   if (Input.GetMouseButtonDown(1) && player2 == true)
-    //   {
-    //        Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-    //        Vector3 offset = new Vector3(0, 0, 10);
-    //        Instantiate(p2token, pos + offset, Quaternion.identity);
-    //        Debug.Log("right click");
-    //        player2 = false;
-    //        player1 = true;
-    //        titleScreen.p1Turn();
-    //        titleScreen.p2TurnFalse();
-    //        src.clip = sfx1;
-    //        src.Play();
-    //   }
-
-    //}
-    //>>>>>>> Stashed changes
-
-    //void UpdateBoardUpState()
-    //{
-    //    for (int row = 0;row < boardUpHeight; row++)
-    //    {
-    //        if (boardUpHeight[column,row] == 0)
-    //        {
-    //            if (player1)
-    //            {
-    //                boardUpState[Column, row] = 2;
-    //            }
-    //        }
-    //    }
-    //}
+    public BoardTurn boardTurn;
+  
 
   
     private enum PlayerTurn
@@ -101,11 +33,30 @@ public class gameManager : MonoBehaviour
 
     private PlayerTurn playerTurn;
 
-     void Start()
+    public void PlayerWon(Token token)
+    {
+       Debug.Log($"<color=green>Player {token.PlayerNumber} has won!</color>");
+
+        if (token.PlayerNumber == PlayerToken.PlayerOne) 
+        {
+            SceneManager.LoadScene("P1 Win Scene");
+            Debug.Log($"<color=blue> you can put the scene transition here</color>");
+        }
+
+        if (token.PlayerNumber == PlayerToken.PlayerTwo)
+        {
+            SceneManager.LoadScene("P2 Win Scene");
+            Debug.Log($"<color=purple> you can put the scene transition here </color>");
+        }
+
+
+    }
+
+    private void Start()
     {
         playerTurn = PlayerTurn.Player1;
         titleScreen.p1Turn();
-        //boardUpState = new int[boardUpHeight, boardUpWidth];
+       
     }
 
     void Update()
@@ -122,10 +73,7 @@ public class gameManager : MonoBehaviour
                     break;
             }
         }
-        /*else
-        {
-            return;
-        }*/
+       
     }
 
     private void PlayerTwoTurn()
@@ -133,11 +81,13 @@ public class gameManager : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         GameObject clickedObject = hit.collider.gameObject;
-        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player2tokens > 0.99)
+        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player2tokens > 0.99 && boardTurn.hasPressedButton == true)
         {
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 offset = new Vector3(0, 0, 10);
-            Instantiate(p2token, pos + offset, Quaternion.identity, clickedObject.transform);
+            Token clone = Instantiate(p2token, pos + offset, Quaternion.identity, clickedObject.transform);
+            tokenPlaced.Invoke(clone);
+            boardTurn.hasPressedButton = false;
             Debug.Log("right click");
             playerTurn = PlayerTurn.Player1;
             titleScreen.p1Turn();
@@ -147,26 +97,24 @@ public class gameManager : MonoBehaviour
             src.Play();
         }
 
-        //if(tokenCounter.player2tokens == 0)
-        //{
-        //    p2NoTokens = true;
-        //    Debug.Log("player 2 no tokens left");
-        //}
+       
     }
     
-
+    
 
     private void PlayerOneTurn()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
         GameObject clickedObject = hit.collider.gameObject;
-        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player1tokens > 0.99)
+        if (clickedObject.CompareTag("gridPiece") && clickedObject.transform.childCount == 0 && tokenCounter.player1tokens > 0.99 && boardTurn.hasPressedButton == true)
         {
 
             Vector3 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 offset = new Vector3(0, 0, 10);
-            Instantiate(p1token, pos + offset, Quaternion.identity, clickedObject.transform);
+            var clone = Instantiate(p1token, pos + offset, Quaternion.identity, clickedObject.transform);
+            tokenPlaced.Invoke(clone);
+            boardTurn.hasPressedButton = false;
             Debug.Log("left click");
             playerTurn = PlayerTurn.Player2;
             titleScreen.p1TurnFalse();
@@ -176,21 +124,10 @@ public class gameManager : MonoBehaviour
             src.Play();
         }
 
-        //if(tokenCounter.player1tokens == 0)
-        //{
-        //    p1NoTokens = true;
-        //    Debug.Log("player 1 no tokens left");
-        //}
+        
     }
 
-    //public void showDrawScreen()
-    //{
-    //    if (p1NoTokens == true & p2NoTokens == true) 
-    //    {
-    //        Debug.Log("show draw screen");
-    //        titleScreen.drawScene();
-    //    }
-    //}
+    
 
 }
 

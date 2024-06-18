@@ -11,6 +11,11 @@ public class BoardTurn : MonoBehaviour
     public GameObject boardRight;
     public AudioSource src;
     public AudioClip sfx1;
+    public bool hasPressedButton = false;
+    public UniversalToken UniversalToken;
+
+    
+
 
 
     public float Left = 90f;
@@ -18,86 +23,137 @@ public class BoardTurn : MonoBehaviour
 
     public void TurnLeft()
     {
+        if (hasPressedButton == false )
+        {
+            boardTop.transform.Rotate(0, 0, Left);
 
-        boardTop.transform.Rotate(0, 0, Left);
+            transform.RotateAround(boardTop.transform.position, Vector3.right, Left * Time.deltaTime);
+            Debug.Log("Left");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
 
-        transform.RotateAround(boardTop.transform.position,Vector3.right,Left * Time.deltaTime);
-        Debug.Log("Left");
-        src.clip = sfx1;
-        src.Play();
+            
+           
+        }
     }
 
     public void TurnRight()
     {
-        boardTop.transform.Rotate(0, 0, Right);
+        if (hasPressedButton == false )
+        {
+            boardTop.transform.Rotate(0, 0, Right);
 
-        transform.RotateAround(boardTop.transform.position, Vector3.right, Right * Time.deltaTime);
-        Debug.Log("Right");
-        src.clip = sfx1;
-        src.Play();
+            transform.RotateAround(boardTop.transform.position, Vector3.right, Right * Time.deltaTime);
+            Debug.Log("Right");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
+
+           
+
+
+        }
     }
 
     public void TurnLeftBoardBottom()
     {
+        if (hasPressedButton == false )
+        {
+            boardBottom.transform.Rotate(0, 0, Left);
 
-        boardBottom.transform.Rotate(0, 0, Left);
+            transform.RotateAround(boardBottom.transform.position, Vector3.right, Left * Time.deltaTime);
+            Debug.Log("Left");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
 
-        transform.RotateAround(boardBottom.transform.position, Vector3.right, Left * Time.deltaTime);
-        Debug.Log("Left");
-        src.clip = sfx1;
-        src.Play();
+
+            
+        }
     }
 
     public void TurnRightBoardBottom()
     {
-        boardBottom.transform.Rotate(0, 0, Right);
+        if (hasPressedButton == false )
+        {
+            boardBottom.transform.Rotate(0, 0, Right);
 
-        transform.RotateAround(boardBottom.transform.position, Vector3.right, Right * Time.deltaTime);
-        Debug.Log("Right");
-        src.clip = sfx1;
-        src.Play();
+            transform.RotateAround(boardBottom.transform.position, Vector3.right, Right * Time.deltaTime);
+            Debug.Log("Right");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
+        }
+        
     }
 
     public void TurnLeftBoardLeft()
     {
+        if (hasPressedButton == false )
+        {
+            boardLeft.transform.Rotate(0, 0, Left);
 
-        boardLeft.transform.Rotate(0, 0, Left);
+            transform.RotateAround(boardLeft.transform.position, Vector3.right, Left * Time.deltaTime);
+            Debug.Log("Left");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
 
-        transform.RotateAround(boardLeft.transform.position, Vector3.right, Left * Time.deltaTime);
-        Debug.Log("Left");
-        src.clip = sfx1;
-        src.Play();
+
+
+        }
     }
 
     public void TurnRightBoardLeft()
     {
-        boardLeft.transform.Rotate(0, 0, Right);
+        if (hasPressedButton == false)
+        {
+            boardLeft.transform.Rotate(0, 0, Right);
 
-        transform.RotateAround(boardLeft.transform.position, Vector3.right, Right * Time.deltaTime);
-        Debug.Log("Right");
-        src.clip = sfx1;
-        src.Play();
+            transform.RotateAround(boardLeft.transform.position, Vector3.right, Right * Time.deltaTime);
+            Debug.Log("Right");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
+
+
+            
+        }
     }
 
     public void TurnLeftBoardRight()
     {
+        if (hasPressedButton == false )
+        {
+            boardRight.transform.Rotate(0, 0, Left);
 
-        boardRight.transform.Rotate(0, 0, Left);
+            transform.RotateAround(boardRight.transform.position, Vector3.right, Left * Time.deltaTime);
+            Debug.Log("Left");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
 
-        transform.RotateAround(boardRight.transform.position, Vector3.right, Left * Time.deltaTime);
-        Debug.Log("Left");
-        src.clip = sfx1;
-        src.Play();
+
+           
+        }
     }
 
     public void TurnRightBoardRight()
     {
-        boardRight.transform.Rotate(0, 0, Right);
+        if (hasPressedButton == false )
+        {
+            boardRight.transform.Rotate(0, 0, Right);
 
-        transform.RotateAround(boardRight.transform.position, Vector3.right, Right * Time.deltaTime);
-        Debug.Log("Right");
-        src.clip = sfx1;
-        src.Play();
+            transform.RotateAround(boardRight.transform.position, Vector3.right, Right * Time.deltaTime);
+            Debug.Log("Right");
+            src.clip = sfx1;
+            src.Play();
+            hasPressedButton = true;
+
+
+           
+        }
     }
 }
 
